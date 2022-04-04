@@ -39,7 +39,7 @@ class Login_Register_Controller extends BaseController
     	$result = DB::table("users")->where("e_mail", $e_mail)->where("password", $password)->get();
     	if(count($result)==1){
     		Session::put("user_login_id", $result[0]->user_id);
-    		return redirect("dashboard")->with("success", "Your Account Register Successfully");
+    		return redirect("manager/dashboard")->with("success", "Your Account Register Successfully");
     	}
     }
     public function dashboard(){

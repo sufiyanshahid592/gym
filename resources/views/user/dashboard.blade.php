@@ -69,116 +69,106 @@ window['_fs_namespace'] = 'FS';
                     <a class="button" href="manager/academies/add">Add New Location</a>
                 </div>
 			</div>
-    
 			<div id="menu">
         		<ul>
-			<li><a href="manager/dashboard" class="dashboard selected">Dashboard</a></li>
-						<li>
-                                <a href="manager/members/list" class="members">Members</a>				
-			</li>
-            <li class="mobile"><a class="checkin" href="manager/attendance/checkin">Check-in</a></li>
-									<li><a href="manager/billing/overview" class="billing">Billing</a>
-				
-			</li>
-						<li>
-                                <a href="manager/marketing/dashboard" class="marketing">Marketing </a>
-                
-				
-			</li>
-						<li><a href="manager/website/settings" class="website">Website</a>
-				
-			</li>
-            						<li><a href="manager/sales/create" class="sales">Sales</a>
-				
-			</li>
-						<li><a href="manager/gym/settings" class="academy">Gym</a></li>		
-            						<li class="front-desk">
-				<a>Front Desk</a>
-			</li>
-            			                                    <li class="usermenu">
-				
-				<a href="manager/account/settings">Account          <i class="fa-solid fa-user"></i>                                               <small>25 days left</small>
-                                        
-                                    </a>
-                
-			</li>
-			<li class="get-help">
-                
-                <a title="Need help? Click here" href="help/docs" target="_blank" class="icon-help-circle">Help</a>
-                
-			</li>
-            <li class="mobile logout"><a href="manager/login/logout"><i class="icon-logout"></i> Log-out</a></li>
-            <li class="back-to-top">
-                <a href="/manager/dashboard#top"><i class="icon-angle-up"></i>
-                    Back to top</a>
-            </li>
-		</ul>
+        			<li>
+                        <a href="{{url('manager/dashboard')}}" class="dashboard selected">Dashboard</a>
+                    </li>
+        			<li>
+                        <a href="{{url('manager/members/list')}}" class="members">Members</a>				
+        			</li>
+                    <li class="mobile">
+                        <a class="checkin" href="{{url('manager/attendance/checkin')}}">Check-in</a>
+                    </li>
+        			<li>
+                        <a href="{{url('manager/billing/overview')}}" class="billing">Billing</a>
+        			</li>
+                    <li>
+                        <a href="{{url('manager/marketing/dashboard')}}" class="marketing">Marketing </a>
+        			</li>
+        			<li>
+                        <a href="{{url('manager/website/settings')}}" class="website">Website</a>
+        			</li>
+                    <li>
+                        <a href="{{url('manager/sales/create')}}" class="sales">Sales</a>
+        			</li>
+        			<li>
+                        <a href="{{url('manager/gym/settings')}}" class="academy">Gym</a>
+                    </li>
+                    <li class="front-desk">
+        				<a>Front Desk</a>
+        			</li>
+                    <li class="usermenu">
+        				<a href="{{url('manager/account/settings')}}">
+                            Account
+                            <i class="fa-solid fa-user"></i>
+                            <small>25 days left</small>
+                        </a>
+        			</li>
+        			<li class="get-help">
+                        <a title="Need help? Click here" href="{{url('help/docs')}}" target="_blank" class="icon-help-circle">Help</a>
+        			</li>
+                    <li class="mobile logout">
+                        <a href="{{url('manager/login/logout')}}"><i class="icon-logout"></i> Log-out</a>
+                    </li>
+                    <li class="back-to-top">
+                        <a href="{{url('manager/dashboard#top')}}"><i class="icon-angle-up"></i>Back to top</a>
+                    </li>
+        		</ul>
 			</div>
-	<a class="showmenu"><i class="icon-menu"></i>
-            </a>
-	
-	   </div>
-<div id="front-desk-popup" class="popup">
-		<h2>Activate Front Desk Mode</h2>
-	<div class="body">
-		<p>Activating the front desk mode hides all the manager tools aside from <b>attendance tracking</b> and <b>member sign-up</b>. You can turn off this mode at any time by entering your password.</p>
-		<div class="buttons">
-			<a class="button activate">Activate Front Desk Mode</a>
-		</div>
-	</div>
-	</div>
-		<div id="body">
-			<div id="dashboard">
-	<div class="section-header nonav">
-        <div class="width">
+            <a class="showmenu"><i class="icon-menu"></i></a>
+        </div>
+        <div id="front-desk-popup" class="popup">
+            <h2>Activate Front Desk Mode</h2>
+            <div class="body">
+                <p>Activating the front desk mode hides all the manager tools aside from <b>attendance tracking</b> and <b>member sign-up</b>. You can turn off this mode at any time by entering your password.</p>
+                <div class="buttons">
+                    <a class="button activate">Activate Front Desk Mode</a>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="dashboard">
+                <div class="section-header nonav">
+                    <div class="width">
                         <div class="trial-notice">25 days left on free trial <a class="hollow-button" href="manager/account/pickplan">Upgrade</a></div>
-                        <h2><img src="{{url('assets/user/images/manager/icons/ill-dashboard.png')}}" /> Dashboard</h2>            
-            <em class="location">hamza</em>
-            
-                        
-            
-             
-        </div>
-                                     </div>
-    <div class="main width">
-        <div class="sidebar container sessions">
-                        <h3><img src="{{url('assets/user/images/manager/icons/icn-sessions-module.png')}}" /> Schedule Today</h3>
-                                    <div class="placeholder">No upcoming training sessions<br />
-                <a class="button" href="manager/gym/schedule">Manage schedule</a>
-            </div>
-                       
-        </div>
-        <div class="mainbar">
-            
-            <div class="notifications container list-section"> 
-                               
-                                <h3><img src="{{url('assets/user/images/manager/icons/icn-notifications-module.png')}}" /> Notifications</h3>
-                                
-                <div class="placeholder">There are no notifications at this time</div>
-                
-            </div>
+                        <h2>
+                            <img src="{{url('assets/user/images/manager/icons/ill-dashboard.png')}}" /> Dashboard
+                        </h2>            
+                        <em class="location">hamza</em>
                     </div>
-	</div>
-	
-</div>
-			<div class="clear" style="clear:both;"></div>
-		</div>
-		
+                </div>
+                <div class="main width">
+                    <div class="sidebar container sessions">
+                        <h3><img src="{{url('assets/user/images/manager/icons/icn-sessions-module.png')}}" /> Schedule Today</h3>
+                        <div class="placeholder">No upcoming training sessions<br />
+                            <a class="button" href="manager/gym/schedule">Manage schedule</a>
+                        </div>
+                    </div>
+                    <div class="mainbar">
+                        <div class="notifications container list-section"> 
+                            <h3><img src="{{url('assets/user/images/manager/icons/icn-notifications-module.png')}}" /> Notifications</h3>
+                            <div class="placeholder">There are no notifications at this time</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear" style="clear:both;"></div>
+        </div>
 	</div>
 	<div id="footer" >
 		<div class="links">
-        <a href="https://gymdesk.com/contact">Contact</a> | 
-        <a href="https://gymdesk.com/help/docs">Documentation</a> |  
-        <a href="https://gymdesk.com/login/logout">Logout</a>
-	</div>
-        	<div class="powered">
-        
-		<p>Powered by <a href="https://gymdesk.com">Gymdesk</a></p>
-	</div>
-            	<input type="hidden" id="date-format" value="yy/mm/dd" />
-    <input type="hidden" id="range-date-format" value="YYYY/MM/DD" />
-    <input id="first_day_week" type="hidden" name="first_day_week" value="1" />
-    <input type="hidden" name="module" value="manager" />
+            <a href="https://gymdesk.com/contact">Contact</a> | 
+            <a href="https://gymdesk.com/help/docs">Documentation</a> |  
+            <a href="https://gymdesk.com/login/logout">Logout</a>
+    	</div>
+        <div class="powered">    
+    		<p>Powered by <a href="https://gymdesk.com">Gymdesk</a></p>
+    	</div>
+        <input type="hidden" id="date-format" value="yy/mm/dd" />
+        <input type="hidden" id="range-date-format" value="YYYY/MM/DD" />
+        <input id="first_day_week" type="hidden" name="first_day_week" value="1" />
+        <input type="hidden" name="module" value="manager" />
     </div>	
 <!-- <script
   src="//code.jquery.com/jquery-3.6.0.min.js"
