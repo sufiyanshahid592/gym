@@ -11,22 +11,105 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index');
+Route::post('send-emial','EmailController@email');
+Route::get('software/gyms','HomeController@software_gym');
+Route::get('software/martial-arts','HomeController@software_martial_arts');
+Route::get('software/gymnastics','HomeController@software_gymnastics');
+Route::get('software/yoga','HomeController@software_yoga');
+Route::get('software/dance','HomeController@software_dance');
+Route::get('features/members','HomeController@features_members');
+Route::get('features/billing','HomeController@features_billing');
+Route::get('features/attendance','HomeController@features_attendance');
+Route::get('features/booking','HomeController@features_booking');
+Route::get('features/website','HomeController@features_website');
+Route::get('features/reporting','HomeController@features_reporting');
+Route::get('features/marketing','HomeController@features_marketing');
+Route::get('features/pos','HomeController@features_pos');
+Route::get('pricing','HomeController@pricing');
+Route::get('blog','HomeController@blog');
+Route::get('podcast','HomeController@podcast');
+Route::get('contact','HomeController@contact');
+Route::get('content/about','HomeController@content_about');
+Route::get('alternative/mindbody','HomeController@alternative_mindbody');
+Route::get('alternative/zenplanner','HomeController@alternative_zenplanner');
+Route::get('alternative/kicksite','HomeController@alternative_kicksite');
+Route::get('alternative/spark','HomeController@alternative_spark');
+Route::get('alternative/pushpress','HomeController@alternative_pushpress');
+Route::get('alternative/gymmaster','HomeController@alternative_gymmaster');
+Route::get('software/membership-clubs','HomeController@software_membership_clubs');
+Route::get('lp/contract-template','HomeController@lp_contract_template');
+Route::get('lp/bbwidget','HomeController@lp_bbwidget');
+Route::get('best-gym-management-software','HomeController@best_gym_management_software');
+Route::get('page/trust','HomeController@page_trust');
+Route::get('page/terms','HomeController@page_terms');
+Route::get('page/privacy','HomeController@page_privacy');
 
 Route::get("register", "Login_Register_Controller@register");
 Route::post("register-process", "Login_Register_Controller@register_process");
 Route::get("login", "Login_Register_Controller@login");
 Route::post("login-process", "Login_Register_Controller@login_process");
-Route::get("manager/dashboard", "Login_Register_Controller@dashboard");
-Route::get("manager/members/list", "Login_Register_Controller@manager_members_list");
-Route::get("manager/attendance/checkin", "Login_Register_Controller@manager_attendance_checkin");
-Route::get("manager/billing/overview", "Login_Register_Controller@manager_billing_overview");
-Route::get("manager/marketing/dashboard", "Login_Register_Controller@manager_marketing_dashboard");
-Route::get("manager/website/settings", "Login_Register_Controller@manager_website_settings");
-Route::get("manager/sales/create", "Login_Register_Controller@manager_sales_create");
-Route::get("manager/gym/settings", "Login_Register_Controller@manager_gym_settings");
+
+// Dashboard
+Route::get("manager/dashboard", "Dashboard_Controller@dashboard");
+
+// Members 
+Route::get("manager/members/list", "Members_Controller@manager_members_list");
+Route::get("manager/attendance/checkin", "Members_Controller@manager_attendance_checkin");
+Route::get("manager/attendance/overview", "Members_Controller@manager_attendance_overview");
+	
+	Route::get("manager/attendance/list", "Members_Controller@manager_attendance_list");
+	Route::get("manager/attendance/promotions", "Members_Controller@manager_attendance_promotions");
+	Route::get("manager/attendance/members", "Members_Controller@manager_attendance_members");
+	Route::get("manager/attendance/sessions", "Members_Controller@manager_attendance_sessions");
+	Route::get("manager/attendance/multi", "Members_Controller@manager_attendance_multi");
+	Route::get("manager/attendance/settings", "Members_Controller@manager_attendance_settings");
+
+Route::get("manager/memberships/manage", "Members_Controller@manager_memberships_manage");
+Route::get("manager/docs/manage", "Members_Controller@manager_docs_manage");
+Route::get("manager/content/members", "Members_Controller@manager_content_members");
+Route::get("manager/members/summary", "Members_Controller@manager_members_summary");
+Route::get("manager/members/settings", "Members_Controller@manager_members_settings");
+
+// Billing
+Route::get("manager/billing/overview", "Billing_Controller@manager_billing_overview");
+	Route::get("manager/billing/payments", "Billing_Controller@manager_billing_payments");
+	Route::get("manager/billing/recurring", "Billing_Controller@manager_billing_recurring");
+	Route::get("manager/billing/discounts", "Billing_Controller@manager_billing_discounts");
+	Route::get("manager/billing/forms", "Billing_Controller@manager_billing_forms");
+	Route::get("manager/billing/accounting", "Billing_Controller@manager_billing_accounting");
+	Route::get("manager/billing/balances", "Billing_Controller@manager_billing_balances");
+
+// Marketing
+Route::get("manager/marketing/dashboard", "Marketing_Controller@manager_marketing_dashboard");
+	Route::get("manager/marketing/referrals", "Marketing_Controller@manager_marketing_referrals");
+	Route::get("manager/marketing/leads", "Marketing_Controller@manager_marketing_leads");
+	Route::get("manager/marketing/messaging", "Marketing_Controller@manager_marketing_messaging");
+	Route::get("manager/automations/manage", "Marketing_Controller@manager_automations_manage");
+	Route::get("manager/marketing/settings", "Marketing_Controller@manager_marketing_settings");
+
+// Website
+Route::get("manager/website/settings", "Website_Controller@manager_website_settings");
+	Route::get("manager/website/homepage", "Website_Controller@manager_website_homepage");
+	Route::get("manager/website/instructors", "Website_Controller@manager_website_instructors");
+	Route::get("manager/website/location", "Website_Controller@manager_website_location");
+	Route::get("manager/website/schedule", "Website_Controller@manager_website_schedule");
+	Route::get("manager/website/forms", "Website_Controller@manager_website_forms");
+	Route::get("manager/website/content", "Website_Controller@manager_website_content");
+	Route::get("manager/website/gallery", "Website_Controller@manager_website_gallery");
+	Route::get("manager/website/pricing", "Website_Controller@manager_website_pricing");
+// Sales
+Route::get("manager/sales/create", "Sales_Controller@manager_sales_create");
+	Route::get("manager/products/report", "Sales_Controller@manager_products_report");
+
+// Gym
+Route::get("manager/gym/settings", "Gym_Controller@manager_gym_settings");
+
+// Account Setting
 Route::get("manager/account/settings", "Login_Register_Controller@manager_account_settings");
+
+// Help
 Route::get("help/docs", "Login_Register_Controller@help_docs");
+
+
 Route::get("manager/login/logout", "Login_Register_Controller@manager_login_logout");

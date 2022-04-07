@@ -14,9 +14,14 @@ class Login_Register_Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function check_user_login(){
-    	if(Session::get("user_login_id")==""){
-    		echo redirect("login");
+    	if(Session::get("user_login_id")!=""){
+            echo redirect("manager/dashboard");
     	}
+    }
+    public function check_user_not_login(){
+        if(Session::get("user_login_id")==""){
+    		echo redirect("login");
+        }
     }
     public function register(){
     	return view("user/register");
@@ -31,6 +36,7 @@ class Login_Register_Controller extends BaseController
     	}
     }
     public function login(){
+        $this->check_user_login();
     	return view("user/login");
     }
     public function login_process(Request $request){
@@ -42,8 +48,8 @@ class Login_Register_Controller extends BaseController
     		return redirect("manager/dashboard")->with("success", "Your Account Register Successfully");
     	}
     }
-    public function dashboard(){
-    	$this->check_user_login();
-    	return view("user/dashboard");
+    public function manager_login_logout(Request $request){
+        $request->session()->forget('user_login_id');
+        return redirect("login");
     }
 }

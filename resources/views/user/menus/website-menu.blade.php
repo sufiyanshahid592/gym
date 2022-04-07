@@ -1,0 +1,9 @@
+<li><a href="{{url('manager/website/settings')}}" class="<?php if(Request::is('manager/website/settings')){echo "selected";} ?>">Settings</a></li>
+<li><a href="{{url('manager/website/homepage')}}" class="<?php if(Request::is('manager/website/homepage')){echo "selected";} ?>">Homepage</a></li>
+<li><a href="{{url('manager/website/instructors')}}" class="<?php if(Request::is('manager/website/instructors')){echo "selected";} ?>">Instructors</a></li>
+<li><a href="{{url('manager/website/location')}}" class="<?php if(Request::is('manager/website/location')){echo "selected";} ?>">Location</a></li>
+<li><a href="{{url('manager/website/schedule')}}" class="<?php if(Request::is('manager/website/schedule')){echo "selected";} ?>">Schedule</a></li>
+<li><a href="{{url('manager/website/forms')}}" class="<?php if(Request::is('manager/website/forms')){echo "selected";} ?>">Forms</a></li>
+<li><a href="{{url('manager/website/content')}}" class="<?php if(Request::is('manager/website/content')){echo "selected";} ?>">Content</a></li>
+<li><a href="{{url('manager/website/gallery')}}" class="<?php if(Request::is('manager/website/gallery')){echo "selected";} ?>">Gallery</a></li>
+<li><a href="{{url('manager/website/pricing')}}" class="<?php if(Request::is('manager/website/pricing')){echo "selected";} ?>">Pricing</a></li>

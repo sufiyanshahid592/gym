@@ -13,5 +13,13 @@ use Session;
 class Sales_Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    
+    public function check_user_not_login(){
+        if(Session::get("user_login_id")==""){
+            echo redirect("login");
+        }
+    }
+    public function manager_products_report(){
+    	$this->check_user_not_login();
+    	return view("user/products-report");
+    }
 }
