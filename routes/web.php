@@ -113,3 +113,90 @@ Route::get("help/docs", "Login_Register_Controller@help_docs");
 
 
 Route::get("manager/login/logout", "Login_Register_Controller@manager_login_logout");
+
+
+
+// Admin Routes
+Route::get('admin/login','AdminController@index');
+Route::get('/logout','AdminController@logout');
+
+// Routes Redirect to admin Dashboard
+
+Route::post('/create-user','AdminController@login_user');
+
+Route::get('/dashboard','DashboardController@index');
+
+// Routes Change Password admin
+
+Route::get('/changepassword', 'DashboardController@changePassword');
+
+Route::post('/change-password','DashboardController@updatePassword');
+
+// Routes Admin Blog Crud
+
+Route::get('/addblog','BlogController@index');
+
+Route::post('/createblog','BlogController@create');
+
+Route::get('/showblog', 'BlogController@showBlog');
+
+Route::get('/editblog/{id}','BlogController@edit');
+
+Route::post('/updateblog/{id}','BlogController@update');
+
+Route::get('/only-view-blog/{id}','BlogController@viewBlog');
+
+Route::get('/deleteblog/{id}','BlogController@destroy');
+
+Route::get('blog','HomeController@our_blog_view');
+
+Route::post('blog-search','HomeController@blog_searchbar');
+
+
+
+
+
+
+
+
+
+// Routes Admin Home slider Crud
+
+Route::get('home-slider','DashboardController@homeSlider');
+
+Route::post('create-homeslider','DashboardController@createSlider');
+
+Route::get('show-homeslider','DashboardController@showSlider');
+
+Route::get('/edit-homeslider/{id}','DashboardController@editSlider');
+
+Route::get('/only-view-homeslider/{id}','DashboardController@onlyViewSlider');
+
+Route::post('/update-homeslider/{id}','DashboardController@updateSlider');
+
+Route::get('/delete-homeslider/{id}','DashboardController@destroyHomeSlider');
+
+
+// Routes Admin Testimonial slider Crud
+
+Route::get('add-testimonial','DashboardController@testimonial');
+Route::post('create-testimonial', 'DashboardController@createTestimonial');
+Route::get('show-testimonial', 'DashboardController@show_testimonial');
+Route::get('edit-testimonial/{id}', 'DashboardController@edit_testimonial');
+Route::get('only-view-testimonial/{id}', 'DashboardController@view_testimonial');
+Route::post('update-testimonial/{id}', 'DashboardController@update_testimonial');
+Route::get('delete-testimonial/{id}', 'DashboardController@deleteTestmonial');
+
+
+
+
+
+
+
+// Routes Admin Socials Crud
+
+Route::get('add-socials','DashboardController@socials');
+Route::post('create-socials', 'DashboardController@create_socials_Links');
+
+
+
