@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     
-    public function index(){
-        
-
-        return view('web/index');
-
+    public function index(){  
+      $data['slider'] = DB::table("sections")->where("section_id", 23)->get();
+      /*print_r($data);
+      die();*/
+      return view('web/index', $data);
     }
     public function software_gym(){
         

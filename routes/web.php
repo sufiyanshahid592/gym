@@ -153,8 +153,21 @@ Route::get('blog','HomeController@our_blog_view');
 Route::post('blog-search','HomeController@blog_searchbar');
 
 
+// Admin Section
 
+Route::get('/add-section','SectionController@index');
 
+Route::post('/create-section','SectionController@create');
+
+Route::get('/show-sections', 'SectionController@showSections');
+
+Route::get('/edit-section/{id}','SectionController@edit');
+
+Route::post('/update-section/{id}','SectionController@update');
+
+Route::get('/only-view-section/{id}','SectionController@viewSection');
+
+Route::get('/delete-section/{id}','SectionController@destroy');
 
 
 

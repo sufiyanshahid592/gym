@@ -4,39 +4,7 @@
 
 
 		<div id="body">
-			<div class="hero">
-    <div class="blue">
-        
-        <h1>Gym management software that frees up your time and helps you grow.</h1>
-        <h2>Simplified billing, enrollment, member management, and marketing features that help you grow your gym or martial arts school.</h2>
-        
-        <a href="register" class="button">Start A 30-Day Free Trial</a>
-        <small>* No credit card required to start</small>
-        
-    </div><div class="photo">
-        
-        
-        <a class="play-video with-text" youtube-id="jKEt_fnccaQ"><span class="play">Watch Instant Demo <i class="icon-play"></i></span></a>
-        
-    </div>
-    <div class="video">
-        <a class="close-video"><i class="icon-cancel-1"></i></a>
-        <div class="video-wrapper"><div id="hp-video"></div></div>
-    </div>
-    <ul class="quick-points">
-        <li>
-           <span><img src="images/lp/newhp/kick.svg" title="Fight &amp; Fitness" /></span>
-            <p>Quick setup with<br /> no training required</p>
-        </li>
-        <li><span><img src="images/lp/newhp/heart.svg" title="Impress" /></span>
-            <p>Amazing<br /> customer support</p>
-        </li>
-        <li>
-            <span><img src="images/lp/newhp/calendar.svg" title="30-day free trial" /></span>
-            <p>Try it for free<br /> for 30 days</p>
-        </li>
-    </ul>
-</div>
+            <?php print_r($slider); ?>
 <div class="testimonials">
     <h2>Here's Why Gyms Love<br /> Gymdesk</h2>
     <div class="controls">

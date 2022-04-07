@@ -50,6 +50,13 @@
                         <li><a href="{{ url('/showblog') }}">Show blog </a></li>
                     </ul>
                 </li>
+                <li>
+                    <a><i class="fa fa-file"></i> Add Section<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="{{ url('/add-section') }}">Add Section</a></li>
+                        <li><a href="{{ url('/show-sections') }}">Show Sections </a></li>
+                    </ul>
+                </li>
 
                 <li>
                     <a><i class="fa fa-columns"></i>Our Testimonial<span class="fa fa-chevron-down"></span></a>
