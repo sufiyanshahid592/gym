@@ -14,6 +14,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        server: ftp.taleemehaq.com
-        username: test@test.taleemehaq.com
-        password: yW_]sur]lyal
+        server: ftp.mastersgym.co
+        username: u301593136.mastersgym.co
+        password: Global@net@@786
